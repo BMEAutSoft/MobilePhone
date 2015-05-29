@@ -25,7 +25,7 @@ public class Business {
         System.out.println("#               TODOLIST               #");
         System.out.println("#                                      #");
         System.out.println("########################################");
-        List<Todo> todoList = todoLogic.getAvailableTodos();
+        List<Todo> todoList = todoLogic.getAvailableItems();
         for(Todo todo: todoList){
             System.out.println(todo.toString());
         }
