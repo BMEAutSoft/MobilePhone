@@ -99,3 +99,5 @@ MobilePhone.iml
 .idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml
 .idea/libraries/Maven__commons_validator_commons_validator_1_2_0.xml
 .idea/libraries/Maven__hu_cegnev_todolistapp_todolistapp_1_0.xml
+.idea/libraries/Maven__commons_logging_commons_logging_1_0_4.xml
+.idea/libraries/Maven__log4j_log4j_1_2_17.xml

@@ -5,10 +5,14 @@ import hu.cegnev.todolistapp.model.Todo;
 import org.joda.time.DateTime;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Business {
 
     TodoLogic todoLogic;
+
+    final static Logger logger = Logger.getLogger(Business.class.getName());
 
     public Business(){
         todoLogic = new TodoLogic();
@@ -20,14 +24,18 @@ public class Business {
     }
 
     public void showTodoList(){
-        System.out.println("########################################");
-        System.out.println("#                                      #");
-        System.out.println("#               TODOLIST               #");
-        System.out.println("#                                      #");
-        System.out.println("########################################");
+        log("########################################");
+        log("#                                      #");
+        log("#               TODOLIST               #");
+        log("#                                      #");
+        log("########################################");
         List<Todo> todoList = todoLogic.getAvailableItems();
         for(Todo todo: todoList){
-            System.out.println(todo.toString());
+            log(todo.toString());
         }
+    }
+
+    private void log(String message){
+        logger.log(Level.ALL, message);
     }
 }
